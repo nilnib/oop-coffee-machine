@@ -17,9 +17,9 @@ while status:
         status = False
     elif user_choice == "report":
         coffee_make.report()
+        money.report()
     elif (coffee_make.is_resource_sufficient(item.find_drink(user_choice))):
         #Check that suufficient money is inserted or not
-
         if money.make_payment(item.find_drink(user_choice).cost):
             coffee_make.make_coffee(item.find_drink(user_choice))
             coffee_make.report()
